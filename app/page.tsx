@@ -1,0 +1,19 @@
+import Background from "@/components/Background";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import Story from "@/components/Story";
+import FAQ from "@/components/FAQ";
+import Footer from "@/components/Footer";
+
+export default function Home() {
+  return (
+    <main className="relative overflow-hidden bg-[#05070d] text-white">
+      <Background />
+      <Navbar />
+      <Hero />
+      <Story />
+      <FAQ />
+      <Footer />
+    </main>
+  );
+}
