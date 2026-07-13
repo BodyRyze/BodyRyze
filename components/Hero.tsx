@@ -4,7 +4,7 @@ import CountUp from "./CountUp";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-[100dvh] w-full flex-col items-center justify-start overflow-hidden px-6 pb-16 pt-10 text-center sm:justify-center sm:py-32">
+    <section className="relative flex min-h-[100dvh] w-full flex-col items-center justify-center overflow-hidden px-6 py-16 text-center sm:py-32">
       {/* ---------- FOND ---------- */}
       <div className="absolute inset-0 bg-[#05070d]" />
       <ParallaxBg src="/gym.jpg" className="absolute inset-0 opacity-60" speed={0.15} />
