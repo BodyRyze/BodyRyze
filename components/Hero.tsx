@@ -4,7 +4,7 @@ import CountUp from "./CountUp";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden px-6 py-32 text-center">
+    <section className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden px-6 py-16 text-center sm:py-32">
       {/* ---------- FOND ---------- */}
       <div className="absolute inset-0 bg-[#05070d]" />
       <ParallaxBg src="/gym.jpg" className="absolute inset-0 opacity-60" speed={0.15} />
@@ -16,7 +16,7 @@ export default function Hero() {
 
       {/* ---------- CONTENU ---------- */}
       <div className="relative z-10 flex max-w-5xl flex-col items-center">
-        <p className="hero-in hero-eyebrow mb-24 inline-flex items-center gap-3 rounded-full border border-[#1e6bff]/40 bg-[#1e6bff]/10 px-6 py-2.5 text-sm uppercase tracking-[0.3em] text-[#9dc0ff] backdrop-blur">
+        <p className="hero-in hero-eyebrow mb-10 inline-flex items-center gap-3 rounded-full border border-[#1e6bff]/40 bg-[#1e6bff]/10 px-6 py-2.5 text-sm uppercase tracking-[0.3em] text-[#9dc0ff] backdrop-blur sm:mb-24">
           <span className="h-1.5 w-1.5 rounded-full bg-[#00e5ff] shadow-[0_0_10px_#00e5ff]" />
           Coaching 100% BodyRyze
           <span className="h-1.5 w-1.5 rounded-full bg-[#00e5ff] shadow-[0_0_10px_#00e5ff]" />
@@ -25,7 +25,7 @@ export default function Hero() {
         <h1 className="hero-in hero-d2 text-3d text-6xl uppercase leading-[0.82] tracking-tight text-white sm:text-7xl md:text-8xl">
           Ton programme,
           <span className="mt-5 block">
-            <span className="hero-block inline-block -rotate-2 bg-gradient-to-r from-[#00e5ff] to-[#1e6bff] px-5 pb-2 pt-3 text-white shadow-[0_0_45px_rgba(30,107,255,0.6)]">
+            <span className="hero-block inline-block -rotate-2 whitespace-nowrap bg-gradient-to-r from-[#00e5ff] to-[#1e6bff] px-3 pb-1.5 pt-2 text-3xl text-white shadow-[0_0_45px_rgba(30,107,255,0.6)] sm:px-5 sm:pb-2 sm:pt-3 sm:text-7xl md:text-8xl">
               mon expérience
             </span>
           </span>
@@ -33,7 +33,7 @@ export default function Hero() {
 
         <Link
           href="/commencer"
-          className="hero-in hero-d3 text-3d-sm text-neon group mt-16 inline-flex items-center gap-3 text-2xl uppercase tracking-wide transition hover:-translate-y-0.5 sm:text-3xl"
+          className="hero-in hero-d3 text-3d-sm text-neon group mt-8 inline-flex items-center gap-3 text-2xl uppercase tracking-wide transition hover:-translate-y-0.5 sm:mt-16 sm:text-3xl"
         >
           Commencer maintenant
           <span className="transition group-hover:translate-x-1">→</span>
@@ -51,7 +51,7 @@ export default function Hero() {
           Je te contacte <span className="text-glow-soft font-semibold text-white">sous 24h</span>
         </p>
 
-        <div className="hero-in hero-d4 mt-8 flex flex-col items-center text-[#00e5ff]">
+        <div className="hero-in hero-d4 mt-4 hidden flex-col items-center text-[#00e5ff] sm:mt-8 sm:flex">
           <svg className="scroll-chevron h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
             <path d="M4 8l8 8 8-8" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
@@ -65,7 +65,7 @@ export default function Hero() {
       </div>
 
       {/* ---------- STATS CENTRÉES EN BAS ---------- */}
-      <div className="hero-in hero-d4 absolute bottom-10 left-0 right-0 z-10 flex items-center justify-center gap-8 px-6 text-center sm:gap-12">
+      <div className="hero-in hero-d4 absolute bottom-4 left-0 right-0 z-10 flex items-center justify-center gap-8 px-6 text-center sm:bottom-10 sm:gap-12">
         <div>
           <CountUp end={12} prefix="+" suffix="kg" className="text-3d-sm text-2xl text-white sm:text-3xl" />
           <p className="mt-1 text-[10px] uppercase tracking-wider text-[#5b657c] sm:text-xs">6 mois</p>
