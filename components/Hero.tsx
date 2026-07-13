@@ -4,7 +4,7 @@ import CountUp from "./CountUp";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden px-6 py-16 text-center sm:py-32">
+    <section className="relative flex min-h-[100dvh] w-full flex-col items-center justify-start overflow-hidden px-6 pb-16 pt-10 text-center sm:justify-center sm:py-32">
       {/* ---------- FOND ---------- */}
       <div className="absolute inset-0 bg-[#05070d]" />
       <ParallaxBg src="/gym.jpg" className="absolute inset-0 opacity-60" speed={0.15} />
@@ -16,7 +16,7 @@ export default function Hero() {
 
       {/* ---------- CONTENU ---------- */}
       <div className="relative z-10 flex max-w-5xl flex-col items-center">
-        <p className="hero-in hero-eyebrow mb-10 inline-flex items-center gap-3 rounded-full border border-[#1e6bff]/40 bg-[#1e6bff]/10 px-6 py-2.5 text-sm uppercase tracking-[0.3em] text-[#9dc0ff] backdrop-blur sm:mb-24">
+        <p className="hero-in hero-eyebrow mb-6 inline-flex items-center gap-3 rounded-full border border-[#1e6bff]/40 bg-[#1e6bff]/10 px-6 py-2.5 text-sm uppercase tracking-[0.3em] text-[#9dc0ff] backdrop-blur sm:mb-24">
           <span className="h-1.5 w-1.5 rounded-full bg-[#00e5ff] shadow-[0_0_10px_#00e5ff]" />
           Coaching 100% BodyRyze
           <span className="h-1.5 w-1.5 rounded-full bg-[#00e5ff] shadow-[0_0_10px_#00e5ff]" />
@@ -47,18 +47,18 @@ export default function Hero() {
           <span className="transition group-hover:translate-x-1">→</span>
         </a>
 
-        <p className="hero-in hero-d4 mt-7 text-base uppercase text-white sm:text-lg">
+        <p className="hero-in hero-d4 mt-4 text-base uppercase text-white sm:mt-7 sm:text-lg">
           Je te contacte <span className="text-glow-soft font-semibold text-white">sous 24h</span>
         </p>
 
-        <div className="hero-in hero-d4 mt-4 hidden flex-col items-center text-[#00e5ff] sm:mt-8 sm:flex">
-          <svg className="scroll-chevron h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+        <div className="hero-in hero-d4 mt-3 flex flex-col items-center text-[#00e5ff] sm:mt-8">
+          <svg className="scroll-chevron h-4 w-4 sm:h-6 sm:w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
             <path d="M4 8l8 8 8-8" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          <svg className="scroll-chevron scroll-chevron-2 -mt-3 h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+          <svg className="scroll-chevron scroll-chevron-2 -mt-2 h-4 w-4 sm:-mt-3 sm:h-6 sm:w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
             <path d="M4 8l8 8 8-8" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          <svg className="scroll-chevron scroll-chevron-3 -mt-3 h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+          <svg className="scroll-chevron scroll-chevron-3 -mt-2 h-4 w-4 sm:-mt-3 sm:h-6 sm:w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
             <path d="M4 8l8 8 8-8" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </div>
