@@ -25,7 +25,7 @@ export default function Hero() {
         <h1 className="hero-in hero-d2 text-3d text-6xl uppercase leading-[0.82] tracking-tight sm:text-7xl md:text-8xl">
           <span className="text-neon">Ton programme,</span>
           <span className="mt-1 block sm:mt-5">
-            <span className="hero-block inline-block -rotate-2 whitespace-nowrap bg-gradient-to-r from-[#00e5ff] to-[#1e6bff] px-3 pb-1.5 pt-2 text-3xl text-white shadow-[0_0_45px_rgba(30,107,255,0.6)] sm:px-5 sm:pb-2 sm:pt-3 sm:text-7xl md:text-8xl">
+            <span className="hero-block inline-block -rotate-2 whitespace-nowrap bg-gradient-to-r from-[#00e5ff] to-[#1e6bff] px-3 pb-1.5 pt-2 text-4xl text-white shadow-[0_0_45px_rgba(30,107,255,0.6)] sm:px-5 sm:pb-2 sm:pt-3 sm:text-7xl md:text-8xl">
               mon expérience
             </span>
           </span>
@@ -33,7 +33,7 @@ export default function Hero() {
 
         <Link
           href="/commencer"
-          className="hero-in hero-d3 text-3d-sm text-neon group mt-8 inline-flex items-center gap-3 text-2xl uppercase tracking-wide transition hover:-translate-y-0.5 sm:mt-16 sm:text-3xl"
+          className="hero-in hero-d3 text-3d-sm text-neon group mt-12 inline-flex items-center gap-3 text-2xl uppercase tracking-wide transition hover:-translate-y-0.5 sm:mt-16 sm:text-3xl"
         >
           Commencer maintenant
           <span className="transition group-hover:translate-x-1">→</span>
@@ -41,13 +41,13 @@ export default function Hero() {
 
         <a
           href="#histoire"
-          className="hero-in hero-d3 text-3d-sm text-neon group mt-5 inline-flex items-center gap-2 text-lg uppercase tracking-wide transition hover:-translate-y-0.5"
+          className="hero-in hero-d3 text-3d-sm text-neon group mt-7 inline-flex items-center gap-2 text-lg uppercase tracking-wide transition hover:-translate-y-0.5"
         >
           Voir avant / après
           <span className="transition group-hover:translate-x-1">→</span>
         </a>
 
-        <p className="hero-in hero-d4 mt-7 text-base uppercase text-white sm:mt-7 sm:text-lg">
+        <p className="hero-in hero-d4 mt-9 text-base uppercase text-white sm:mt-7 sm:text-lg">
           Je te contacte <span className="text-glow-soft font-semibold text-white">sous 24h</span>
         </p>
 
