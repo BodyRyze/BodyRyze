@@ -1,11 +1,13 @@
 import Link from "next/link";
+import ParallaxBg from "./ParallaxBg";
+import CountUp from "./CountUp";
 
 export default function Hero() {
   return (
     <section className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden px-6 py-32 text-center">
       {/* ---------- FOND ---------- */}
       <div className="absolute inset-0 bg-[#05070d]" />
-      <div className="absolute inset-0 bg-cover bg-center opacity-60" style={{ backgroundImage: "url('/gym.jpg')" }} />
+      <ParallaxBg src="/gym.jpg" className="absolute inset-0 opacity-60" speed={0.15} />
       <div className="absolute inset-0 bg-gradient-to-b from-[#05070d]/80 via-[#05070d]/55 to-[#05070d]" />
       <div className="hero-orb absolute left-1/2 top-[38%] h-[750px] w-[750px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#1e6bff] blur-[170px]" />
       <div className="hero-grid absolute inset-x-0 bottom-0 h-[38%]" />
@@ -21,7 +23,12 @@ export default function Hero() {
         </p>
 
         <h1 className="hero-in hero-d2 text-3d text-6xl uppercase leading-[0.82] tracking-tight text-white sm:text-7xl md:text-8xl">
-          Ton programme, mon expérience
+          Ton programme,
+          <span className="mt-5 block">
+            <span className="hero-block inline-block -rotate-2 bg-gradient-to-r from-[#00e5ff] to-[#1e6bff] px-5 pb-2 pt-3 text-white shadow-[0_0_45px_rgba(30,107,255,0.6)]">
+              mon expérience
+            </span>
+          </span>
         </h1>
 
         <Link
@@ -60,17 +67,17 @@ export default function Hero() {
       {/* ---------- STATS CENTRÉES EN BAS ---------- */}
       <div className="hero-in hero-d4 absolute bottom-10 left-0 right-0 z-10 flex items-center justify-center gap-8 px-6 text-center sm:gap-12">
         <div>
-          <p className="text-3d-sm text-2xl text-white sm:text-3xl">+10kg</p>
-          <p className="mt-1 text-[10px] uppercase tracking-wider text-[#5b657c] sm:text-xs">ma transformation</p>
+          <CountUp end={12} prefix="+" suffix="kg" className="text-3d-sm text-2xl text-white sm:text-3xl" />
+          <p className="mt-1 text-[10px] uppercase tracking-wider text-[#5b657c] sm:text-xs">6 mois</p>
         </div>
         <div className="h-9 w-px bg-white/15" />
         <div>
-          <p className="text-3d-sm text-2xl text-white sm:text-3xl">100%</p>
+          <CountUp end={100} suffix="%" className="text-3d-sm text-2xl text-white sm:text-3xl" />
           <p className="mt-1 text-[10px] uppercase tracking-wider text-[#5b657c] sm:text-xs">programme sur-mesure</p>
         </div>
         <div className="h-9 w-px bg-white/15" />
         <div>
-          <p className="text-3d-sm text-2xl text-white sm:text-3xl">24h</p>
+          <CountUp end={24} suffix="h" className="text-3d-sm text-2xl text-white sm:text-3xl" />
           <p className="mt-1 text-[10px] uppercase tracking-wider text-[#5b657c] sm:text-xs">délai de réponse</p>
         </div>
       </div>
@@ -134,6 +141,8 @@ export default function Hero() {
           .hero-scan, .hero-orb, .hero-in, .scroll-chevron { animation: none; opacity: 1; }
         }
       `}</style>
+
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px origin-bottom-left -rotate-1 bg-gradient-to-r from-transparent via-[#00e5ff]/60 to-transparent shadow-[0_0_12px_rgba(0,229,255,0.6)]" />
     </section>
   );
 }

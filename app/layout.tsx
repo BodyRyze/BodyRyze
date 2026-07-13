@@ -15,6 +15,18 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "BodyRyze — Coaching sportif 100% sur-mesure",
   description: "Programme de coaching personnalisé adapté à ton objectif, ton quotidien et ton niveau. Réponse sous 24h.",
+  openGraph: {
+    title: "BodyRyze — Coaching sportif 100% sur-mesure",
+    description: "Programme de coaching personnalisé adapté à ton objectif, ton quotidien et ton niveau. Réponse sous 24h.",
+    siteName: "BodyRyze",
+    locale: "fr_FR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BodyRyze — Coaching sportif 100% sur-mesure",
+    description: "Programme de coaching personnalisé adapté à ton objectif, ton quotidien et ton niveau. Réponse sous 24h.",
+  },
 };
 
 export default function RootLayout({

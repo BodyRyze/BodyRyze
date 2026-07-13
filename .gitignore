@@ -38,6 +38,7 @@ yarn-error.log*
 
 # claude code local settings (may contain sensitive command history)
 .claude/settings.local.json
+.claude/scheduled_tasks.lock
 
 # typescript
 *.tsbuildinfo

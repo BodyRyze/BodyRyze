@@ -1,34 +1,38 @@
 import Link from "next/link";
+import ParallaxBg from "./ParallaxBg";
+import Reveal from "./Reveal";
 
 export default function Story() {
   return (
     <section id="histoire" className="relative w-full overflow-hidden px-6 py-28">
       <div className="absolute inset-0 bg-[#05070d]" />
-      <div className="absolute inset-0 bg-cover bg-center opacity-30" style={{ backgroundImage: "url('/story-bg.jpg')" }} />
+      <ParallaxBg src="/story-bg.jpg" className="absolute inset-0 opacity-30" speed={0.15} />
       <div className="absolute inset-0 bg-gradient-to-b from-[#05070d] via-[#05070d]/70 to-[#05070d]" />
       <div className="pointer-events-none absolute right-1/4 top-0 h-[500px] w-[500px] rounded-full bg-[#1e6bff] opacity-20 blur-[160px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
-        <h2 className="text-3d text-center text-4xl uppercase leading-[0.95] tracking-tight text-white sm:text-5xl">
-          Ma transformation en seulement 6 mois
-        </h2>
+        <Reveal>
+          <h2 className="text-3d text-center text-4xl uppercase leading-[0.95] tracking-tight text-white sm:text-5xl">
+            Ma transformation en seulement 6 mois
+          </h2>
 
-        <div className="mx-auto mt-6 flex w-24 items-center gap-2">
-          <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent to-[#00e5ff]" />
-          <div className="h-1.5 w-1.5 rotate-45 bg-[#00e5ff] shadow-[0_0_10px_#00e5ff]" />
-          <div className="h-[2px] flex-1 bg-gradient-to-l from-transparent to-[#00e5ff]" />
-        </div>
+          <div className="mx-auto mt-6 flex w-24 items-center gap-2">
+            <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent to-[#00e5ff]" />
+            <div className="h-1.5 w-1.5 rotate-45 bg-[#00e5ff] shadow-[0_0_10px_#00e5ff]" />
+            <div className="h-[2px] flex-1 bg-gradient-to-l from-transparent to-[#00e5ff]" />
+          </div>
 
-        <div
-          className="mx-auto mt-6 flex w-fit items-center gap-3 rounded-full border border-[#1e6bff]/40 bg-[#1e6bff]/10 px-6 py-2.5 text-sm uppercase tracking-[0.3em] text-[#9dc0ff] backdrop-blur"
-          style={{ fontFamily: "'Anton', sans-serif", fontStyle: "italic" }}
-        >
-          <span className="h-1.5 w-1.5 rounded-full bg-[#00e5ff] shadow-[0_0_10px_#00e5ff]" />
-          Photos 100% authentiques, non retouchées
-          <span className="h-1.5 w-1.5 rounded-full bg-[#00e5ff] shadow-[0_0_10px_#00e5ff]" />
-        </div>
+          <div
+            className="mx-auto mt-6 flex w-fit items-center gap-3 rounded-full border border-[#1e6bff]/40 bg-[#1e6bff]/10 px-6 py-2.5 text-sm uppercase tracking-[0.3em] text-[#9dc0ff] backdrop-blur"
+            style={{ fontFamily: "'Anton', sans-serif", fontStyle: "italic" }}
+          >
+            <span className="h-1.5 w-1.5 rounded-full bg-[#00e5ff] shadow-[0_0_10px_#00e5ff]" />
+            Photos 100% authentiques, non retouchées
+            <span className="h-1.5 w-1.5 rounded-full bg-[#00e5ff] shadow-[0_0_10px_#00e5ff]" />
+          </div>
+        </Reveal>
 
-        <div className="mt-16 flex flex-col items-center gap-10 sm:flex-row sm:items-start sm:justify-center">
+        <Reveal delay={100} className="mt-16 flex flex-col items-center gap-10 sm:flex-row sm:items-start sm:justify-center">
           <div className="flex flex-col items-center gap-4">
             <p className="text-3d-sm text-2xl uppercase text-white sm:text-3xl">Avant</p>
             <div className="group-glow flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-nowrap sm:overflow-x-auto sm:gap-6">
@@ -82,17 +86,17 @@ export default function Story() {
               </div>
             </div>
           </div>
-        </div>
+        </Reveal>
 
-        <div className="mx-auto mt-14 flex max-w-md items-center gap-4">
+        <Reveal delay={150} className="mx-auto mt-14 flex max-w-md items-center gap-4">
           <span className="text-3d-sm text-sm uppercase tracking-widest text-white">0 jours</span>
           <div className="relative h-[2px] flex-1 bg-gradient-to-r from-[#1e6bff]/20 via-[#00e5ff] to-[#1e6bff]/20">
             <div className="card-dot" style={{ top: "-4px", left: "50%", transform: "translateX(-50%)" }} />
           </div>
           <span className="text-3d-sm text-sm uppercase tracking-widest text-white">180 jours</span>
-        </div>
+        </Reveal>
 
-        <div className="mt-10 flex justify-center">
+        <Reveal delay={200} className="mt-10 flex justify-center">
           <Link
             href="/commencer"
             className="text-3d-sm text-neon group inline-flex items-center gap-3 text-2xl uppercase tracking-wide transition hover:-translate-y-0.5 sm:text-3xl"
@@ -100,8 +104,10 @@ export default function Story() {
             On en discute
             <span className="transition group-hover:translate-x-1">→</span>
           </Link>
-        </div>
+        </Reveal>
       </div>
+
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px origin-bottom-left -rotate-1 bg-gradient-to-r from-transparent via-[#00e5ff]/60 to-transparent shadow-[0_0_12px_rgba(0,229,255,0.6)]" />
     </section>
   );
 }
