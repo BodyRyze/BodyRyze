@@ -22,11 +22,6 @@ export default function Hero() {
 
         <h1 className="hero-in hero-d2 text-3d text-6xl uppercase leading-[0.82] tracking-tight text-white sm:text-7xl md:text-8xl">
           Ton programme, mon expérience
-          <span className="mt-5 block">
-            <span className="hero-block inline-block -rotate-2 bg-[#1e6bff] px-5 pb-2 pt-3 text-white shadow-[0_0_45px_rgba(30,107,255,0.6)]">
-              pas un copier-coller
-            </span>
-          </span>
         </h1>
 
         <Link
