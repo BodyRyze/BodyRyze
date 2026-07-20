@@ -49,8 +49,7 @@ export default function MentionsLegales() {
           <section>
             <h2 className="text-lg font-semibold uppercase tracking-wide text-[#7db4ff]">Cookies</h2>
             <p className="mt-2 leading-relaxed">
-              Ce site utilise Stripe pour le paiement, qui peut déposer des cookies techniques nécessaires au traitement
-              sécurisé des transactions.
+              Ce site n&apos;utilise aucun cookie de suivi ou de publicité.
             </p>
           </section>
         </div>

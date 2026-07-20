@@ -6,14 +6,14 @@ import Reveal from "./Reveal";
 const QUESTIONS = [
   {
     q: "Combien de temps avant d'être contacté ?",
-    a: "Dès que ton paiement est confirmé, je te contacte sous 24h directement sur WhatsApp pour discuter de ton objectif.",
+    a: "Dès que ta demande est envoyée, je te contacte sous 24h directement sur WhatsApp pour discuter de ton objectif.",
   },
   {
     q: "Comment se passe le paiement ?",
-    a: "Le paiement (19,99€) se fait par carte bancaire, directement et de façon sécurisée sur le site via Stripe.",
+    a: "Le paiement (19,99€) se règle directement avec moi sur WhatsApp, une fois qu'on a échangé sur ton objectif.",
   },
   {
-    q: "Que se passe-t-il après le paiement ?",
+    q: "Que se passe-t-il après l'envoi du formulaire ?",
     a: "On échange sur WhatsApp pour bien cerner ton quotidien et tes objectifs, puis je te construis un programme entièrement sur-mesure.",
   },
   {
@@ -26,7 +26,7 @@ const QUESTIONS = [
   },
   {
     q: "Je peux me faire rembourser ?",
-    a: "Oui, dans les conditions prévues par nos CGV (droit de rétractation). Contacte-moi directement si besoin.",
+    a: "Oui, si ton programme ne t'est finalement pas livré. Contacte-moi directement si besoin.",
   },
 ];
 

@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-type Status = "idle" | "loading" | "success" | "error" | "full" | "cancelled";
+type Status = "idle" | "loading" | "success" | "error" | "full";
 type Genre = "Homme" | "Femme" | "";
 type Objectif = "Prise de masse" | "Perte de poids" | "";
 type Lieu = "Maison" | "Salle" | "";
@@ -137,7 +137,7 @@ export default function Commencer() {
       headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify({
         access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
-        subject: "Nouvelle demande de coaching BodyRyze (payée)",
+        subject: "Nouvelle demande de coaching BodyRyze",
         name: metadata.prenom,
         phone: metadata.numero,
         message: `Prénom : ${metadata.prenom}
@@ -153,51 +153,12 @@ Lieu d'entraînement : ${metadata.lieu}
 Disponibilité : ${metadata.disponibilite}
 Matériel disponible : ${metadata.materiel || "Non renseigné"}
 Hygiène de vie : ${metadata.hygieneVie || "Non renseigné"}
-Comment il m'a connu : ${metadata.commentConnu || "Non renseigné"}
-Paiement : 19,99€ reçu ✅`,
+Comment il m'a connu : ${metadata.commentConnu || "Non renseigné"}`,
       }),
     });
     const data = await res.json();
     return Boolean(data.success);
   }
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const payment = params.get("payment");
-    const sessionId = params.get("session_id");
-    if (!payment) return;
-
-    window.history.replaceState(null, "", "/commencer");
-
-    if (payment === "cancelled") {
-      fetch("/api/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ action: "release" }),
-      }).catch(() => {});
-      setStatus("cancelled");
-      return;
-    }
-
-    if (payment === "success" && sessionId) {
-      setStatus("loading");
-      (async () => {
-        try {
-          const verifyRes = await fetch(`/api/verify-session?session_id=${sessionId}`);
-          const verifyData = await verifyRes.json();
-          if (verifyData.paid) {
-            const sent = await sendLeadEmail(verifyData.metadata);
-            setStatus(sent ? "success" : "error");
-          } else {
-            setStatus("error");
-          }
-        } catch {
-          setStatus("error");
-        }
-      })();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   async function handleSubmit() {
     setStatus("loading");
@@ -214,30 +175,25 @@ Paiement : 19,99€ reçu ✅`,
         return;
       }
 
-      const checkoutRes = await fetch("/api/create-checkout-session", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          prenom,
-          numero,
-          age,
-          genre,
-          poids,
-          taille,
-          niveauSportif,
-          objectif,
-          zonesPriorite: zonesPriorite.join(", "),
-          lieu,
-          disponibilite: disponibilite.join(", "),
-          materiel: materiel.join(", "),
-          hygieneVie,
-          commentConnu,
-        }),
+      const sent = await sendLeadEmail({
+        prenom,
+        numero,
+        age,
+        genre,
+        poids,
+        taille,
+        niveauSportif,
+        objectif,
+        zonesPriorite: zonesPriorite.join(", "),
+        lieu,
+        disponibilite: disponibilite.join(", "),
+        materiel: materiel.join(", "),
+        hygieneVie,
+        commentConnu,
       });
-      const checkoutData = await checkoutRes.json();
 
-      if (checkoutData.url) {
-        window.location.href = checkoutData.url;
+      if (sent) {
+        setStatus("success");
       } else {
         await fetch("/api/submit", {
           method: "POST",
@@ -302,7 +258,7 @@ Paiement : 19,99€ reçu ✅`,
 
           {status === "success" ? (
             <div className="py-6 text-center">
-              <p className="text-3d text-4xl text-neon">C&apos;est payé et envoyé 🔥</p>
+              <p className="text-3d text-4xl text-neon">C&apos;est envoyé 🔥</p>
               <p className="text-3d-sm mt-4 text-lg uppercase text-white">
                 Je te contacte sous 24h sur WhatsApp.
               </p>
@@ -313,23 +269,6 @@ Paiement : 19,99€ reçu ✅`,
               <p className="text-3d-sm mt-4 text-lg uppercase text-white">
                 Je ne peux prendre que quelques nouvelles demandes par jour pour bien m&apos;occuper de chacun. Reviens demain !
               </p>
-            </div>
-          ) : status === "cancelled" ? (
-            <div className="py-6 text-center">
-              <p className="text-3d text-4xl text-neon">Paiement annulé</p>
-              <p className="text-3d-sm mt-4 text-lg uppercase text-white">
-                Aucun souci, tu peux réessayer quand tu veux.
-              </p>
-              <button
-                type="button"
-                onClick={() => {
-                  setStatus("idle");
-                  setStep(STEPS.length - 1);
-                }}
-                className="text-3d-sm text-neon mt-8 text-2xl uppercase tracking-wide transition hover:-translate-y-0.5"
-              >
-                Réessayer
-              </button>
             </div>
           ) : (
             <>
@@ -517,7 +456,7 @@ Paiement : 19,99€ reçu ✅`,
                     <rect x="5" y="11" width="14" height="9" rx="1" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M8 11V7a4 4 0 0 1 8 0v4" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                  <span className="text-sm uppercase tracking-[0.2em]">Paiement 100% sécurisé par Stripe</span>
+                  <span className="text-sm uppercase tracking-[0.2em]">Tes informations restent confidentielles</span>
                 </div>
               )}
 
@@ -546,9 +485,9 @@ Paiement : 19,99€ reçu ✅`,
                   className="text-3d-sm text-neon group inline-flex items-center gap-3 text-2xl uppercase tracking-wide transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:translate-y-0 sm:text-3xl"
                 >
                   {status === "loading"
-                    ? "Redirection..."
+                    ? "Envoi..."
                     : step === STEPS.length - 1
-                      ? "Payer 19,99€ et envoyer"
+                      ? "Envoyer"
                       : "Suivant"}
                   <span className="transition group-hover:translate-x-1">→</span>
                 </button>

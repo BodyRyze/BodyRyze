@@ -24,16 +24,16 @@ export default function CGV() {
           <section>
             <h2 className="text-lg font-semibold uppercase tracking-wide text-[#7db4ff]">Article 2 — Prix</h2>
             <p className="mt-2 leading-relaxed">
-              Le prix du programme est de 19,99€ TTC. Le paiement s&apos;effectue en une fois, par carte bancaire, via la
-              solution sécurisée Stripe.
+              Le prix du programme est de 19,99€ TTC. Le paiement s&apos;effectue directement avec le coach sur WhatsApp,
+              après l&apos;envoi du questionnaire.
             </p>
           </section>
 
           <section>
             <h2 className="text-lg font-semibold uppercase tracking-wide text-[#7db4ff]">Article 3 — Commande et paiement</h2>
             <p className="mt-2 leading-relaxed">
-              La commande est confirmée dès que le paiement est validé par Stripe. Le client est ensuite recontacté sous 24h
-              directement sur WhatsApp.
+              La commande est confirmée dès l&apos;envoi du questionnaire. Le client est ensuite recontacté sous 24h
+              directement sur WhatsApp, où les modalités de paiement sont convenues.
             </p>
           </section>
 
