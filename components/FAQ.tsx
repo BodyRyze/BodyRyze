@@ -40,7 +40,7 @@ export default function FAQ() {
       <div className="relative z-10 mx-auto max-w-3xl">
         <Reveal>
           <h2 className="text-3d text-center text-4xl uppercase leading-[0.95] tracking-tight text-white sm:text-5xl">
-            Questions <span className="text-neon">fréquentes</span>
+            Questions fréquentes
           </h2>
         </Reveal>
 
@@ -59,7 +59,7 @@ export default function FAQ() {
                     className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
                   >
                     <span className="text-3d-sm not-italic text-lg text-white sm:text-xl">{item.q}</span>
-                    <span className={`text-neon text-2xl transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}>+</span>
+                    <span className={`text-2xl text-[#00e5ff] transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}>+</span>
                   </button>
                   {isOpen && (
                     <p className="px-6 pb-5 text-base leading-relaxed text-[#aeb6c8]">{item.a}</p>

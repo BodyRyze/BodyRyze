@@ -36,21 +36,19 @@ export default function Story() {
           <div className="flex flex-col items-center gap-4">
             <p className="text-3d-sm text-2xl uppercase text-white sm:text-3xl">Avant</p>
             <div className="group-glow flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-nowrap sm:overflow-x-auto sm:gap-6">
-              <div className="group relative w-full sm:min-w-[320px] sm:max-w-[600px] sm:flex-1 overflow-hidden rounded-none border-2 border-[#1e6bff]/50 shadow-[0_0_40px_rgba(30,107,255,0.35)] ring-1 ring-white/10 transition duration-300 hover:-translate-y-1 hover:border-[#1e6bff]/80 hover:shadow-[0_0_60px_rgba(30,107,255,0.6)]">
+              <div className="group relative w-full sm:min-w-[320px] sm:max-w-[600px] sm:flex-1 overflow-hidden rounded-none border-2 border-[#1e6bff]/30 shadow-[0_0_18px_rgba(30,107,255,0.2)] ring-1 ring-white/10 transition duration-300 hover:-translate-y-1 hover:border-[#1e6bff]/60 hover:shadow-[0_0_30px_rgba(30,107,255,0.35)]">
                 <img src="/avant-1.jpeg" alt="Avant 1" className="h-64 w-full object-cover transition duration-300 group-hover:scale-105 sm:h-96" />
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="light-streak" />
-                <div className="card-scan" />
                 <div className="pointer-events-none absolute left-0 top-0 h-8 w-8 border-l-2 border-t-2 border-[#00e5ff]" />
                 <div className="pointer-events-none absolute right-0 top-0 h-8 w-8 border-r-2 border-t-2 border-[#00e5ff]" />
                 <div className="pointer-events-none absolute bottom-0 left-0 h-8 w-8 border-b-2 border-l-2 border-[#00e5ff]" />
                 <div className="pointer-events-none absolute bottom-0 right-0 h-8 w-8 border-b-2 border-r-2 border-[#00e5ff]" />
               </div>
-              <div className="group relative w-full sm:min-w-[320px] sm:max-w-[600px] sm:flex-1 overflow-hidden rounded-none border-2 border-[#1e6bff]/50 shadow-[0_0_40px_rgba(30,107,255,0.35)] ring-1 ring-white/10 transition duration-300 hover:-translate-y-1 hover:border-[#1e6bff]/80 hover:shadow-[0_0_60px_rgba(30,107,255,0.6)]">
+              <div className="group relative w-full sm:min-w-[320px] sm:max-w-[600px] sm:flex-1 overflow-hidden rounded-none border-2 border-[#1e6bff]/30 shadow-[0_0_18px_rgba(30,107,255,0.2)] ring-1 ring-white/10 transition duration-300 hover:-translate-y-1 hover:border-[#1e6bff]/60 hover:shadow-[0_0_30px_rgba(30,107,255,0.35)]">
                 <img src="/avant-2.jpeg" alt="Avant 2" className="h-64 w-full object-cover transition duration-300 group-hover:scale-105 sm:h-96" />
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="light-streak" />
-                <div className="card-scan" />
                 <div className="pointer-events-none absolute left-0 top-0 h-8 w-8 border-l-2 border-t-2 border-[#00e5ff]" />
                 <div className="pointer-events-none absolute right-0 top-0 h-8 w-8 border-r-2 border-t-2 border-[#00e5ff]" />
                 <div className="pointer-events-none absolute bottom-0 left-0 h-8 w-8 border-b-2 border-l-2 border-[#00e5ff]" />
@@ -59,26 +57,24 @@ export default function Story() {
             </div>
           </div>
 
-          <span className="text-neon rotate-90 text-4xl sm:rotate-0 sm:self-center">→</span>
+          <span className="rotate-90 text-4xl text-[#5b657c] sm:rotate-0 sm:self-center">→</span>
 
           <div className="flex flex-col items-center gap-4">
             <p className="text-3d-sm text-2xl uppercase text-white sm:text-3xl">Après</p>
             <div className="group-glow flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-nowrap sm:overflow-x-auto sm:gap-6">
-              <div className="group relative w-full sm:min-w-[320px] sm:max-w-[600px] sm:flex-1 overflow-hidden rounded-none border-2 border-[#1e6bff]/50 shadow-[0_0_40px_rgba(30,107,255,0.35)] ring-1 ring-white/10 transition duration-300 hover:-translate-y-1 hover:border-[#1e6bff]/80 hover:shadow-[0_0_60px_rgba(30,107,255,0.6)]">
+              <div className="group relative w-full sm:min-w-[320px] sm:max-w-[600px] sm:flex-1 overflow-hidden rounded-none border-2 border-[#1e6bff]/30 shadow-[0_0_18px_rgba(30,107,255,0.2)] ring-1 ring-white/10 transition duration-300 hover:-translate-y-1 hover:border-[#1e6bff]/60 hover:shadow-[0_0_30px_rgba(30,107,255,0.35)]">
                 <img src="/apres-1.jpeg" alt="Après 1" className="h-64 w-full object-cover transition duration-300 group-hover:scale-105 sm:h-96" />
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="light-streak" />
-                <div className="card-scan" />
                 <div className="pointer-events-none absolute left-0 top-0 h-8 w-8 border-l-2 border-t-2 border-[#00e5ff]" />
                 <div className="pointer-events-none absolute right-0 top-0 h-8 w-8 border-r-2 border-t-2 border-[#00e5ff]" />
                 <div className="pointer-events-none absolute bottom-0 left-0 h-8 w-8 border-b-2 border-l-2 border-[#00e5ff]" />
                 <div className="pointer-events-none absolute bottom-0 right-0 h-8 w-8 border-b-2 border-r-2 border-[#00e5ff]" />
               </div>
-              <div className="group relative w-full sm:min-w-[320px] sm:max-w-[600px] sm:flex-1 overflow-hidden rounded-none border-2 border-[#1e6bff]/50 shadow-[0_0_40px_rgba(30,107,255,0.35)] ring-1 ring-white/10 transition duration-300 hover:-translate-y-1 hover:border-[#1e6bff]/80 hover:shadow-[0_0_60px_rgba(30,107,255,0.6)]">
+              <div className="group relative w-full sm:min-w-[320px] sm:max-w-[600px] sm:flex-1 overflow-hidden rounded-none border-2 border-[#1e6bff]/30 shadow-[0_0_18px_rgba(30,107,255,0.2)] ring-1 ring-white/10 transition duration-300 hover:-translate-y-1 hover:border-[#1e6bff]/60 hover:shadow-[0_0_30px_rgba(30,107,255,0.35)]">
                 <img src="/apres-2.jpeg" alt="Après 2" className="h-64 w-full object-cover transition duration-300 group-hover:scale-105 sm:h-96" />
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="light-streak" />
-                <div className="card-scan" />
                 <div className="pointer-events-none absolute left-0 top-0 h-8 w-8 border-l-2 border-t-2 border-[#00e5ff]" />
                 <div className="pointer-events-none absolute right-0 top-0 h-8 w-8 border-r-2 border-t-2 border-[#00e5ff]" />
                 <div className="pointer-events-none absolute bottom-0 left-0 h-8 w-8 border-b-2 border-l-2 border-[#00e5ff]" />

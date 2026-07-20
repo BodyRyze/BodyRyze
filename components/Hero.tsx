@@ -22,8 +22,8 @@ export default function Hero() {
           <span className="h-1.5 w-1.5 rounded-full bg-[#00e5ff] shadow-[0_0_10px_#00e5ff]" />
         </p>
 
-        <h1 className="hero-in hero-d2 text-3d text-6xl uppercase leading-[0.82] tracking-tight sm:text-7xl md:text-8xl">
-          <span className="text-neon">Ton programme,</span>
+        <h1 className="hero-in hero-d2 text-3d text-6xl uppercase leading-[0.82] tracking-tight text-white sm:text-7xl md:text-8xl">
+          Ton programme,
           <span className="mt-1 block sm:mt-5">
             <span className="hero-block inline-block -rotate-2 whitespace-nowrap bg-gradient-to-r from-[#00e5ff] to-[#1e6bff] px-3 pb-1.5 pt-2 text-4xl text-white shadow-[0_0_45px_rgba(30,107,255,0.6)] sm:px-5 sm:pb-2 sm:pt-3 sm:text-7xl md:text-8xl">
               mon expérience
@@ -41,7 +41,7 @@ export default function Hero() {
 
         <a
           href="#histoire"
-          className="hero-in hero-d3 text-3d-sm text-neon group mt-7 inline-flex items-center gap-2 text-lg uppercase tracking-wide transition hover:-translate-y-0.5"
+          className="hero-in hero-d3 text-3d-sm group mt-7 inline-flex items-center gap-2 text-lg uppercase tracking-wide text-[#98a2b8] transition hover:text-white"
         >
           Voir avant / après
           <span className="transition group-hover:translate-x-1">→</span>
